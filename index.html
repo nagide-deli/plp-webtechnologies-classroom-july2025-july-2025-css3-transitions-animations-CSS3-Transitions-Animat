@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Paradise - Luxury Redefined</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with animated navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Hotel Paradise</div>
+         
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#rooms" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="#amenities" class="nav-link">Amenities</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Paradise</h1>
+            <p class="hero-subtitle">Experience luxury like never before</p>
+            <button id="exploreBtn" class="cta-button">Explore Our Rooms</button>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <h2 class="section-title">Our Rooms</h2>
+        <div class="room-container">
+            <div class="room-card">
+                <div class="room-image">
+                    <img src="bed-4416515_1280.jpg" alt="Standard Room">
+                </div>
+                <div class="room-info">
+                    <h3>Standard Room</h3>
+                    <p>Comfortable and affordable accommodation with all basic amenities.</p>
+                    <p class="price">$99/night</p>
+                    <button class="book-btn" data-room="standard">Book Now</button>
+                </div>
+            </div>
+            <div class="room-card">
+                <div class="room-image">
+                    <img src="hotel-room-5858067_1280.jpg" alt="Deluxe Room">
+                </div>
+                <div class="room-info">
+                    <h3>Deluxe Room</h3>
+                    <p>Spacious room with premium amenities and stunning views.</p>
+                    <p class="price">$149/night</p>
+                    <button class="book-btn" data-room="deluxe">Book Now</button>
+                </div>
+            </div>
+            <div class="room-card">
+                <div class="room-image">
+                    <img src="pexels-quark-studio-1159039-2506990.jpg" alt="Suite">
+                </div>
+                <div class="room-info">
+                    <h3>Luxury Suite</h3>
+                    <p>Ultimate luxury with separate living area and premium services.</p>
+                    <p class="price">$249/night</p>
+                    <button class="book-btn" data-room="suite">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities">
+        <h2 class="section-title">Amenities</h2>
+        <div class="amenities-container">
+            <div class="amenity-item">
+                <div class="amenity-icon">🏊</div>
+                <h3>Swimming Pool</h3>
+                <p>Relax in our temperature-controlled infinity pool</p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon">🍽️</div>
+                <h3>Fine Dining</h3>
+                <p>Experience world-class cuisine at our restaurants</p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon">💆</div>
+                <h3>Spa</h3>
+                <p>Rejuvenate with our premium spa treatments</p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon">🏋️</div>
+                <h3>Fitness Center</h3>
+                <p>State-of-the-art equipment for your workout needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>123 Paradise Boulevard, Tropical Island</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Email: info@hotelparadise.com</p>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book a Room</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="roomType">Room Type:</label>
+                    <input type="text" id="roomType" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="checkIn">Check-in Date:</label>
+                    <input type="date" id="checkIn" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkOut">Check-out Date:</label>
+                    <input type="date" id="checkOut" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" min="1" max="4" required>
+                </div>
+                <button type="submit" class="submit-booking">Complete Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Hotel Paradise. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
